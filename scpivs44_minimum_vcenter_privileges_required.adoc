@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: 'Prima di iniziare l"implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.' 
+---
+= Sono richiesti privilegi minimi per vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di iniziare l'implementazione del plug-in SnapCenter per VMware vSphere, assicurarsi di disporre dei privilegi minimi richiesti per vCenter.
+
+
+
+== Privilegi richiesti per il ruolo vCenter Admin
+
+Datastore.AllocateSpace
+Datastore.Browse
+Datastore.Delete
+Gestione datastore.FileManagement
+Datastore.move
+Datastore.Rename
+Extension.Register
+Extension.Annulla registrazione
+Extension.Update
+Host.Config.AdvancedConfig
+Host.Config.Resources
+Host.Config.Settings
+Host.Config.Storage
+Host.Local.CreateVM
+Host.Local.DeleteVM
+Host.Local.ReconfigVM
+Network.Assign
+Resource.ApplyRecommendation
+Resource.AssignVMToPool
+Resource.ColdMigrate
+Resource.HotMigrate
+Resource.QueryVMotion
+System.Anonymous
+System.Read
+System.View (visualizzazione sistema)
+Task.Create
+Task.Update
+VirtualMachine.Config.AddExistingDisk
+VirtualMachine.Config.AddNewDisk
+VirtualMachine.Config.AdvancedConfig
+VirtualMachine.Config.ReloadFromPath
+VirtualMachine.Config.RemoveDisk
+VirtualMachine.Config.Resource
+VirtualMachine.GuestOperations.Execute
+VirtualMachine.GuestOperations.Modify
+VirtualMachine.GuestOperations.Query
+VirtualMachine.Interact.poweroff
+VirtualMachine.Interact.PowerOn
+VirtualMachine.Inventory.Create
+VirtualMachine.Inventory.CreateFromExisting
+VirtualMachine.Inventory.Delete
+VirtualMachine.Inventory.Move
+VirtualMachine.Inventory.Register
+VirtualMachine.Inventory.Unregister
+VirtualMachine.state.CreateSnapshot
+VirtualMachine.state.RemoveSnapshot
+VirtualMachine.state.RevertToSnapshot
+
+
+
+== Privilegi richiesti specifici del plug-in SnapCenter per VMware vCenter
+
+|===
+
+
+| *Privilegi* | *Etichetta* 
+
+
+| NetappSCV.Guest.RestoreFile | Ripristino del file guest 
+
+
+| NetappSCV.Recovery.MountUnmount | Montare/smontare 
+
+
+| NetappSCV.Backup.DeleteBackupJob | Elimina gruppo di risorse/backup 
+
+
+| NetappSCV.Configure.Configure.StorageSystems.Delete | Rimuovere i sistemi storage 
+
+
+| NetappSCV.View | Visualizza 
+
+
+| NetappSCV.Recovery.RecoverVM | Ripristinare la macchina virtuale 
+
+
+| NetappSCV.Configure.Configure.StorageSystems.AddUpdate | Aggiungere/modificare i sistemi storage 
+
+
+| NetappSCV.Backup.BackupNow | Esegui il backup ora 
+
+
+| NetappSCV.Guest.Configure | Configurazione guest 
+
+
+| NetappSCV.Configure.ConfigureSnapCenterServer | Configurare il server SnapCenter 
+
+
+| NetappSCV.Backup.BackupScheduled | Crea gruppo di risorse 
+|===
